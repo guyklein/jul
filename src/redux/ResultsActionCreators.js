@@ -3,11 +3,11 @@ export const actionTypes = {
     CLEAR_RESULTS:   'CLEAR_RESULTS',
 };
 
-export const update = (results) => ({
+export const updateResults = (results) => ({
     type: actionTypes.UPDATE_RESULTS,
     results,
 });
 
-export const clear = () => ({
+export const clearResults = () => ({
     type: actionTypes.CLEAR_RESULTS
 });

@@ -1,17 +1,21 @@
 import SearchResult from "./SearchResult";
 import React from "react";
+import {useSelector} from "react-redux";
+import {useResults} from "../redux/Results";
 
-const ResultsPane = ({search}) =>
+
+const ResultsPane = ({search}) => {
+    const results = useSelector(useResults);
+    return (
     <div>
         {search.loading && <div>...</div>}
         {search.error && <div>Error: {search.error.message}</div>}
-        {search.result && (
+        {results && (
             <div>
-                {
-                    // <div>Results: {search.result.length}</div>
-                }
                 <ul>
-                    {search.result.map(product => (
+                    {
+                        results
+                        .map(product => (
                         <SearchResult
                             key={product.name}
                             product={product}
@@ -20,6 +24,7 @@ const ResultsPane = ({search}) =>
                 </ul>
             </div>
         )}
-    </div>;
+    </div>)
+};
 
 export default ResultsPane;

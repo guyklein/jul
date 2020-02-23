@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 
-export const resultsSelector = state => state.results;
+export const resultsSelector = state => state.resultsReducer;
 
-export const results = createSelector(
+export const useResults = createSelector(
     [ resultsSelector ],
     results => results
 );
