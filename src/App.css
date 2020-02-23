@@ -1,5 +1,17 @@
+html,
+body,
+#root
+{
+    height: 100%;
+    margin: 0
+}
+
 .App {
     text-align: center;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    margin: 0;
 }
 
 .App-logo {
@@ -37,6 +49,13 @@
     }
 }
 
+.results-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: auto;
+}
+
 .result-container {
     display: flex;
 }
@@ -52,19 +71,11 @@
 }
 
 .input-search-bar-wrapper {
-    width: 100%;
     border: 2px solid red;
-    border-radius: 305px;
+    border-radius: 30px;
+    text-align: center;
 }
 
 .input-search-bar {
-    /*width: 90%;*/
     width: 95%;
-    /*padding: 5px;*/
-    /*border: 2px solid red;*/
-    /*border-radius: 305px;*/
-}
-.input-search-bar .MuiOutlinedInput-root{
-    border: 2px solid red;
-    border-radius: 305px;
 }
